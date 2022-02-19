@@ -7,12 +7,13 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
-    '../src/components/**/*.stories.js',
+    '../src/components/**/*.stories.jsx',
   ],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
   ],
   framework: '@storybook/react',
   webpackFinal: async (config) => {

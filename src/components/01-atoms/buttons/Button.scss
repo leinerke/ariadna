@@ -1,0 +1,13 @@
+.button {
+  @apply border border-primary px-4 py-2 min-w-[200px] bg-primary transition-colors text-text;
+  &:hover {
+    @apply bg-transparent border-white text-white;
+  }
+
+  &--secondary {
+    @apply bg-transparent border-white text-white;
+    &:hover {
+      @apply bg-primary border-primary text-white text-text;
+    }
+  }
+}
