@@ -1,13 +1,21 @@
 module.exports = {
   content: ['./src/components**/*.{html,js,,jsx}'],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     fontFamily: {
       sans: ['Open Sans', 'sans-serif'],
     },
     extend: {
       colors: {
         'primary': '#F1E04B',
-        'text': '#050606'
+        'secondary': '#EEEFEF',
+        'text': '#050606',
       },
     },
   },

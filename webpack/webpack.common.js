@@ -33,7 +33,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /(?!\.stories)\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['import-glob', 'babel-loader'],
       },

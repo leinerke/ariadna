@@ -1,0 +1,62 @@
+%active {
+  @apply bg-primary;
+}
+
+.menu {
+  $self: &;
+  @apply lg:flex;
+
+  .submenu-wrap {
+    @apply lg:absolute lg:top-full;
+  }
+
+  #{$self}--sub {
+    @apply shadow-md hidden flex-col w-full lg:w-max lg:max-w-xs;
+
+    #{$self}__link {
+      @apply w-full;
+    }
+
+    .submenu-wrap {
+      @apply left-full top-0 px-2;
+    }
+  }
+
+  #{$self}__item {
+    @apply relative;
+
+    &:hover {
+      > .submenu-wrap {
+        > #{$self}--sub {
+          @media (min-width: 992px) {
+            @apply flex;
+          }
+        }
+      }
+
+      > #{$self}__link {
+        @extend %active;
+      }
+    }
+  }
+
+  #{$self}__link {
+    @apply flex font-semibold items-center justify-between py-6 px-3.5 transition-colors uppercase;
+
+    &--active {
+      @extend %active;
+    }
+
+    &--alt {
+      @apply bg-secondary px-12
+    }
+
+    .expand-sub--hover {
+      @apply w-6 h-6 ml-1;
+    }
+  }
+
+  .expand-sub {
+    @apply w-6 h-6 ml-1 lg:inline-block;
+  }
+}

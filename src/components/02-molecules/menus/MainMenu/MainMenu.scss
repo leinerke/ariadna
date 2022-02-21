@@ -1,0 +1,36 @@
+.navigation--main {
+  .toggle-expand {
+    $self: '.toggle-expand';
+    @apply h-8 w-8 block relative cursor-pointer lg:hidden;
+
+    #{$self}__icon {
+      @apply h-full w-full
+    }
+
+    #{$self}__text {
+      @apply sr-only
+    }
+
+    #{$self}__open {
+      @apply absolute opacity-100 visible;
+    }
+
+    #{$self}__close {
+      @apply absolute opacity-0 invisible;
+    }
+
+    #{$self}--open {
+      #{$self}__open {
+        @apply opacity-0 invisible;
+      }
+
+      #{$self}__close {
+        @apply opacity-100 visible;
+      }
+    }
+  }
+
+  .menu--main {
+    @apply hidden lg:flex;
+  }
+}

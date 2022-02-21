@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "Home",
+      "url": "#",
+      "active": true
+    },
+    {
+      "title": "Categories",
+      "url": "#"
+    },
+    {
+      "title": "My favorites",
+      "url": "#"
+    },
+    {
+      "title": "Sing in",
+      "url": "#",
+      "style": "alt"
+    }
+  ]
+}

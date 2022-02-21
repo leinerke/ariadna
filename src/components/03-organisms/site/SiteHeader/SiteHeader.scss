@@ -1,0 +1,14 @@
+.header {
+  $self: &;
+  @apply flex justify-between items-center;
+
+  #{$self}__branding {
+    img {
+      @apply w-40;
+    }
+  }
+
+  #{$self}__menu {
+
+  }
+}
