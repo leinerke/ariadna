@@ -1,0 +1,14 @@
+.navigation--mobile {
+  .menu--mobile {
+    $self: '.menu';
+    @apply block;
+
+    #{$self}__link {
+      @apply p-4;
+
+      &--alt {
+        @apply p-4;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  $self: &;
+
+  &__copyright {
+    p {
+      @apply text-sm text-center;
+    }
+  }
+}
