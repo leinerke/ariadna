@@ -1,5 +1,5 @@
 import React from 'react';
-import { MobileMenu } from './MobileMenu';
+import MobileMenu from './MobileMenu';
 import { items } from '../MenuItems.json';
 
 /**

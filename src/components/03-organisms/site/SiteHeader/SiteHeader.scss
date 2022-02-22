@@ -1,14 +1,11 @@
 .header {
-  $self: &;
-  @apply flex justify-between items-center;
+  &__inner {
+    @apply container mx-auto px-4 md:px-8 flex justify-between items-center;
+  }
 
-  #{$self}__branding {
+  &__branding {
     img {
       @apply w-40;
     }
-  }
-
-  #{$self}__menu {
-
   }
 }

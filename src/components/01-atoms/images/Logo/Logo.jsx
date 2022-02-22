@@ -1,6 +1,6 @@
 import React from 'react';
 import LogoImage from '../../../../assets/images/logo.png';
-import { bem, bemPrototype } from '../../../_utils/bem';
+import bem, { bemPrototype } from '../../../_utils/bem';
 
 const Logo = ({ block, element = 'logo', modifiers = [] }) => (
   <img
@@ -14,4 +14,4 @@ Logo.prototype = {
   ...bemPrototype,
 };
 
-export { Logo };
+export default Logo;

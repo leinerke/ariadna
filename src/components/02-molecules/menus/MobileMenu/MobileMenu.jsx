@@ -1,6 +1,6 @@
 import React from 'react';
-import { bem } from '../../../_utils/bem';
-import { Menu } from '../Menu';
+import bem from '../../../_utils/bem';
+import Menu from '../Menu';
 import './MobileMenu.scss';
 import PropTypes, { arrayOf } from 'prop-types';
 import { menuItemPropType } from '../MenuItem';
@@ -17,4 +17,4 @@ MobileMenu.propTypes = {
   items: arrayOf(PropTypes.shape(menuItemPropType)),
 };
 
-export { MobileMenu };
+export default MobileMenu;

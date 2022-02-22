@@ -1,6 +1,6 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { bem } from '../../../_utils/bem';
+import bem from '../../../_utils/bem';
 import { XIcon } from '@heroicons/react/outline';
 import './SlideOver.scss';
 
@@ -39,4 +39,4 @@ SlideOver.prototype = {
   body: PropTypes.node,
 };
 
-export { SlideOver };
+export default SlideOver;

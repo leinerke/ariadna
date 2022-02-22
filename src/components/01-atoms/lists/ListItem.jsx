@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bem } from '../../_utils/bem';
+import bem from '../../_utils/bem';
 
 const ListItem = (
   {
@@ -15,10 +15,10 @@ const ListItem = (
   </li>
 );
 
-const ListItemType = {
+export const ListItemType = {
   children: PropTypes.node.isRequired,
 };
 
 ListItem.propTypes = ListItemType;
 
-export { ListItem, ListItemType };
+export default ListItem;

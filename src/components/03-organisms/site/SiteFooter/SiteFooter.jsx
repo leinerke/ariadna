@@ -1,6 +1,6 @@
 import React from 'react';
-import { bem } from '../../../_utils/bem';
-import { Link } from '../../../01-atoms/links/Link';
+import bem  from '../../../_utils/bem';
+import Link  from '../../../01-atoms/links/Link';
 import './SiteFooter.scss';
 
 const SiteFooter = ( ) => {

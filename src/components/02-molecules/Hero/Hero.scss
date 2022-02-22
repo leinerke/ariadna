@@ -1,0 +1,38 @@
+.hero {
+  $self: &;
+  @apply relative;
+
+  &__image {
+    .image {
+      @apply h-full w-full object-cover;
+
+      &--desktop {
+        @apply hidden md:block min-h-[350px] object-center;
+      }
+
+      &--mobile {
+        @apply block md:hidden max-h-[600px] object-top;
+      }
+    }
+  }
+
+  &__content {
+    @apply absolute h-full w-full top-0 left-0 flex items-end pb-8 justify-center md:pb-0 md:items-center;
+  }
+
+  &__content-inner {
+    @apply container px-4 md:px-8 text-white;
+
+    .paragraph {
+      @apply w-[450px] max-w-full mb-6 sm:mb-8;
+    }
+  }
+
+  &__heading {
+    @apply text-4xl sm:text-5xl uppercase font-semibold mb-6 sm:mb-8;
+  }
+
+  &__buttons {
+    @apply font-semibold grid grid-cols-2 md:flex gap-4 text-center;
+  }
+}

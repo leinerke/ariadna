@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bem, bemPrototype } from '../../_utils/bem';
+import bem, { bemPrototype } from '../../_utils/bem';
 
 const Heading = (
   {

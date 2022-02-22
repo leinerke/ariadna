@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
-import { Menu } from '../Menu';
+import Menu from '../Menu';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { menuItemPropType } from '../MenuItem';
-import { bem } from '../../../_utils/bem';
+import bem from '../../../_utils/bem';
 import './MainMenu.scss';
 
 const MainMenu = ({ items }) => (

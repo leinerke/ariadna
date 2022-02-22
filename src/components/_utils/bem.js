@@ -18,7 +18,7 @@ const bem = (
   return componentClasses;
 };
 
-const bemPrototype = {
+export const bemPrototype = {
   block: PropTypes.string,
   element: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
@@ -27,4 +27,4 @@ const bemPrototype = {
 
 bem.prototype = bemPrototype;
 
-export { bem, bemPrototype };
+export default bem;

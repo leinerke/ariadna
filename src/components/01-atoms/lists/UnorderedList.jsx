@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListItem, ListItemType } from './ListItem';
-import { bem, bemPrototype } from '../../_utils/bem';
+import ListItem, { ListItemType } from './ListItem';
+import bem, { bemPrototype } from '../../_utils/bem';
 
 const UnorderedList = (
   {
@@ -29,4 +29,4 @@ UnorderedList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape(ListItemType)).isRequired,
 };
 
-export { UnorderedList };
+export default UnorderedList;

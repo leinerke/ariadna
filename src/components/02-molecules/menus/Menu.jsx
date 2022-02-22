@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MenuItem, menuItemPropType } from './MenuItem';
-import { bem } from '../../_utils/bem';
+import MenuItem, { menuItemPropType } from './MenuItem';
+import bem from '../../_utils/bem';
 import './Menu.scss';
 
 const Menu = ({ block = 'menu', element, modifiers = [], level, items }) => {
@@ -37,4 +37,4 @@ Menu.propTypes = {
   }),
 };
 
-export { Menu };
+export default Menu;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { UnorderedList } from './UnorderedList';
+import UnorderedList from './UnorderedList';
 
 /**
  * Storybook Definition.

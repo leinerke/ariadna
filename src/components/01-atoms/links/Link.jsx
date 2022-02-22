@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bem, bemPrototype } from '../../_utils/bem';
+import bem, { bemPrototype } from '../../_utils/bem';
 import './Link.scss';
 
 const Link = (
@@ -34,4 +34,4 @@ Link.propTypes = {
   title: PropTypes.string,
 };
 
-export { Link };
+export default Link;

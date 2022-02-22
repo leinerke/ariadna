@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { bem, bemPrototype } from '../../_utils/bem';
+import bem, { bemPrototype } from '../../_utils/bem';
 import './Button.scss';
 
 const Button = (
@@ -31,4 +31,4 @@ Button.propTypes = {
   onClick: PropTypes.func,
 };
 
-export { Button };
+export default Button;

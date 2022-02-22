@@ -1,31 +1,31 @@
 body {
-  @apply text-text text-base;
+  @apply text-text text-sm sm:text-base;
 }
 
-h1 {
+h1, .h1 {
   @apply text-4xl;
 }
 
-h2 {
+h2, .h2 {
   @apply text-3xl;
 }
 
-h3 {
+h3, .h3 {
   @apply text-2xl;
 }
 
-h4 {
+h4, .h4 {
   @apply text-lg;
 }
 
-h5 {
+h5, .h5 {
   @apply text-base;
 }
 
-h6 {
+h6, .h6 {
   @apply text-sm;
 }
 
-p {
-  @apply text-base;
+p, .paragraph {
+  @apply text-sm sm:text-base;
 }
