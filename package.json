@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/leinerke/ariadna/issues"
   },
-  "homepage": "https://github.com/leinerke/ariadna#readme",
+  "homepage": "https://leinerke.github.io/ariadna",
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
