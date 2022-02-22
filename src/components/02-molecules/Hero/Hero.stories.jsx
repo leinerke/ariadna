@@ -20,7 +20,6 @@ const buttons = [
 
 export const Hero = () => (
   <HeroComponent
-    outputImage={true}
     image={{
       alt: 'Aquaman',
       src: require('../../../assets/images/banner-aquaman.jpg'),
@@ -30,9 +29,8 @@ export const Hero = () => (
       src: require('../../../assets/images/banner-aquaman-mob.jpg'),
     }}
     heading="Aquaman"
+    content="Arthur Curry learns that he is the heir of the underwater kingdom ok Atlantis. This will become Aquaman, the emperor
+    of Atlantis, committed to defending the entire planet, both on land and in the seas."
     buttons={buttons}
-  >
-    Arthur Curry learns that he is the heir of the underwater kingdom ok Atlantis. This will become Aquaman, the emperor
-    of Atlantis, committed to defending the entire planet, both on land and in the seas.
-  </HeroComponent>
+  />
 );

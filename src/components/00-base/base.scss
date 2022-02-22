@@ -2,5 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./fonts";
-@import "./typography";
+@import './fonts';
+@import './typography';
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';

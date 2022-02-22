@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import bem from '../../../_utils/bem';
 import { XIcon } from '@heroicons/react/outline';
-import './SlideOver.scss';
 
 const SlideOver = ({ modifiers = [], header, body }) => {
   const baseClass = 'slide-over';

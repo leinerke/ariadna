@@ -1,0 +1,31 @@
+.banner {
+  .slick-dots {
+    @apply bottom-8;
+
+    li {
+      button {
+        &:before {
+          @apply text-white opacity-100;
+          font-size: 10px;
+        }
+      }
+
+      &.slick-active {
+        button {
+          @apply border border-solid border-primary rounded-full;
+
+          &:before {
+            @apply text-primary;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero {
+    &__content {
+      @apply pb-20 md:pb-0;
+    }
+  }
+}

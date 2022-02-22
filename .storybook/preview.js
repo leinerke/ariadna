@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from '../src/store';
 
 // GLOBAL CSS
-import '../src/components/00-base/base.scss';
+import '../src/components/**/!(_)*.scss';
 
 export const decorators = [
   Story => (

@@ -5,7 +5,6 @@ import Logo from '../../../01-atoms/images/Logo/Logo';
 import MainMenu from '../../../02-molecules/menus/MainMenu/MainMenu';
 import { menuItemPropType } from '../../../02-molecules/menus/MenuItem';
 import bem from '../../../_utils/bem';
-import './SiteHeader.scss';
 
 const SiteHeader = ({ menu }) => {
   const block = 'header';

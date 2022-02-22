@@ -7,7 +7,7 @@
       @apply h-full w-full object-cover;
 
       &--desktop {
-        @apply hidden md:block min-h-[350px] object-center;
+        @apply hidden md:block min-h-[400px] object-center;
       }
 
       &--mobile {

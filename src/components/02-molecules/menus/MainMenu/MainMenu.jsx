@@ -4,7 +4,6 @@ import Menu from '../Menu';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { menuItemPropType } from '../MenuItem';
 import bem from '../../../_utils/bem';
-import './MainMenu.scss';
 
 const MainMenu = ({ items }) => (
   <nav id="site-navigation" className={bem('navigation', '', ['main'])}>

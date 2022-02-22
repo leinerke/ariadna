@@ -8,16 +8,16 @@ import Paragraph from '../../01-atoms/text/Paragraph.component';
 import Link from '../../01-atoms/links/Link';
 import './Hero.scss';
 
-const Hero = ({ block = 'hero', outputImage, image, imageMobile, heading, children, buttons }) => {
+const Hero = ({ block = 'hero', image, imageMobile, heading, content, buttons }) => {
   return (
-    <BackgroundImage block={block} outputImage={outputImage} image={image} imageMobile={imageMobile}>
+    <BackgroundImage block={block} image={image} imageMobile={imageMobile}>
       <div className={bem(block, 'content-inner')}>
         {heading && (
           <Heading level="2" block={block} element="heading">
             {heading}
           </Heading>
         )}
-        <Paragraph>{children}</Paragraph>
+        <Paragraph>{content}</Paragraph>
         <div className={bem(block, 'buttons')}>
           {buttons.map(({ url, style, title }) => (
             <Link url={url} block="button" modifiers={style ? [style] : []}>{title}</Link>
@@ -30,10 +30,9 @@ const Hero = ({ block = 'hero', outputImage, image, imageMobile, heading, childr
 
 Hero.propTypes = {
   block: PropTypes.string,
-  outputImage: PropTypes.bool,
   image: imageTypeProps.isRequired,
   heading: PropTypes.string,
-  children: PropTypes.element.isRequired,
+  content: PropTypes.element.isRequired,
   buttons: PropTypes.array.isRequired,
 };
 
