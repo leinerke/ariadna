@@ -1,0 +1,30 @@
+.card {
+  &__inner {
+    @apply relative;
+  }
+
+  &__image {
+    .image {
+      @apply w-full h-full object-center object-cover;
+    }
+  }
+
+  &__content {
+    @apply absolute w-full h-full top-0 left-0 flex items-center justify-evenly flex-col opacity-0 hover:opacity-100 transition-opacity;
+
+    &:before {
+      @apply content-[''] block absolute w-full h-full top-0 left-0 bg-black opacity-70;
+    }
+
+    .heading {
+      @apply text-center text-white uppercase relative font-semibold w-48 max-w-full;
+    }
+  }
+
+  &__buttons {
+    @apply flex items-center justify-center flex-col gap-4 relative font-semibold uppercase;
+    .button {
+      @apply w-[150px] xs:min-w-[180px] md:min-w-[200px];
+    }
+  }
+}

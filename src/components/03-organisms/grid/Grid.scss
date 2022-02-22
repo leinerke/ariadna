@@ -1,0 +1,9 @@
+.AM-grid {
+  &__inner {
+    @apply container mx-auto px-4 md:px-8;
+  }
+
+  &__content {
+    @apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+  }
+}

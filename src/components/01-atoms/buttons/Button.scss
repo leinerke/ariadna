@@ -1,5 +1,5 @@
 .button {
-  @apply border border-primary px-4 py-2 min-w-[120px] xs:min-w-[180px] md:min-w-[200px] bg-primary transition-colors text-text;
+  @apply text-center inline-block border border-primary px-4 py-2 min-w-[120px] xs:min-w-[180px] md:min-w-[200px] bg-primary transition-colors text-text;
   &:hover {
     @apply bg-transparent border-white text-white;
   }

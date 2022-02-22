@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Paragraph from './Paragraph.component';
-import Heading from './Heading.component';
+import Paragraph from './Paragraph';
+import Heading from './Heading';
 
 /**
  * Storybook Definition.
