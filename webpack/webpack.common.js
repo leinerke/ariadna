@@ -1,5 +1,4 @@
 const path = require('path');
-const glob = require('glob');
 const globImporter = require('node-sass-glob-importer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -7,22 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const rootDir = path.resolve(__dirname, '../');
 
-const entry = () => {
-  const entries = {};
-
-  entries.app = './src/index.js';
-
-  glob.sync(path.resolve(rootDir, 'src/components/**/!(_)*.scss')).forEach(file => {
-    const filePath = file.split('components/')[1];
-    let newFilePath = `css/${filePath}`.replace('.scss', '');
-    entries[newFilePath] = file;
-  });
-
-  return entries;
-};
-
 module.exports = {
-  entry: entry(),
+  entry: './src/index.js',
   output: {
     path: path.resolve(rootDir, 'dist'),
     filename: '[name].min.js',

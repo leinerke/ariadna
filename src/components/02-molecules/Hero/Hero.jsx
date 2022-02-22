@@ -6,7 +6,6 @@ import { imageTypeProps } from '../../01-atoms/images/Image/Image';
 import Heading from '../../01-atoms/text/Heading';
 import Paragraph from '../../01-atoms/text/Paragraph';
 import Link from '../../01-atoms/links/Link';
-import './Hero.scss';
 
 const Hero = ({ block = 'hero', image, imageMobile, heading, content, buttons }) => {
   return (
