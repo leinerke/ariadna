@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import bem from '../../_utils/bem';
 import Hero from '../Hero/Hero';
@@ -17,7 +18,7 @@ const Banner = ({ slides }) => {
   return (
     <div className={bem('banner')}>
       <Slider {...settings}>
-        {slides.map(({ image, imageMobile, heading, content, buttons }, key) => (
+        {!!slides && slides.map(({ image, imageMobile, heading, content, buttons }, key) => (
           <div key={key}>
             <Hero
               image={image}
@@ -33,4 +34,8 @@ const Banner = ({ slides }) => {
   );
 };
 
-export default Banner;
+const mapStateToProps = state => ({
+  slides: state.banner,
+});
+
+export default connect(mapStateToProps, null)(Banner);

@@ -1,9 +1,7 @@
 import { createStore } from 'redux';
 import { reducer } from '../reducers';
 
-const initialState = {
-  test: 'test'
-};
+const initialState = {};
 
 const store = createStore(reducer, initialState);
 

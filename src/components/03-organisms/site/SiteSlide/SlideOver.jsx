@@ -2,17 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import bem from '../../../_utils/bem';
 import { XIcon } from '@heroicons/react/outline';
+import { connect } from 'react-redux';
+import { closeMenu } from '../../../../actions';
 
-const SlideOver = ({ modifiers = [], header, body }) => {
+const SlideOver = ({ header, body, openMenu, closeMenu }) => {
   const baseClass = 'slide-over';
+  const handleCloseMenu = () => {
+    closeMenu();
+  };
   return (
-    <div className={bem('slide-over', null, modifiers)}>
+    <div className={bem('slide-over', null, openMenu ? ['open'] : [])}>
       <div className={bem(baseClass, 'wrap')}>
-        <div className={bem(baseClass, 'overlay')} />
+        <div onClick={handleCloseMenu} className={bem(baseClass, 'overlay')} />
         <div className={bem(baseClass, 'container')}>
           <div className={bem(baseClass, 'content-wrap')}>
             <div className={bem(baseClass, 'close-button')}>
-              <button>
+              <button onClick={handleCloseMenu}>
                 <span>Close panel!</span>
                 <XIcon />
               </button>
@@ -38,4 +43,12 @@ SlideOver.prototype = {
   body: PropTypes.node,
 };
 
-export default SlideOver;
+const mapStateToProps = state => ({
+  openMenu: state.openMenu,
+});
+
+const mapDispatchToProps = {
+  closeMenu,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SlideOver);

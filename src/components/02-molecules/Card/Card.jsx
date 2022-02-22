@@ -20,8 +20,8 @@ const Card = ({ block = 'card', image, heading, buttons }) => (
           {heading}
         </Heading>
         <div className={bem(block, 'buttons')}>
-          {buttons.map(({ url, style, title }) => (
-            <Link url={url} block="button" modifiers={style ? [style] : []}>{title}</Link>
+          {buttons.map(({ url, style, title }, key) => (
+            <Link key={key} url={url} block="button" modifiers={style ? [style] : []}>{title}</Link>
           ))}
         </div>
       </div>

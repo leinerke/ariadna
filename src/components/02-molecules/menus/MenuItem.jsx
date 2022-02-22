@@ -1,15 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import Menu from './Menu';
 import bem from '../../_utils/bem';
 
 const MenuItem = ({ title, url, active, style, subLinks, block = 'menu', modifiers = [] }) => {
-  const [isExpanded, setExpanded] = useState(false);
-  const toggleExpanded = () => setExpanded(!isExpanded);
-  const expandedModifiers = isExpanded ? ['open'] : [];
-  const submenuModifiers = isExpanded ? ['sub-open'] : [];
-
   const mods = [].concat(modifiers, style, active ? ['active'] : [], subLinks ? ['with-sub'] : []);
   return (
     <li className={bem(block, 'item', mods)}>
@@ -17,8 +12,7 @@ const MenuItem = ({ title, url, active, style, subLinks, block = 'menu', modifie
         {title}
         {subLinks && (
           <span
-            className={bem('expand-sub', '', expandedModifiers)}
-            onClick={toggleExpanded}
+            className={bem('expand-sub')}
           >
             <ChevronDownIcon />
           </span>
@@ -30,7 +24,6 @@ const MenuItem = ({ title, url, active, style, subLinks, block = 'menu', modifie
             block={block}
             level={1}
             items={subLinks}
-            modifiers={submenuModifiers}
           />
         </div>
       )}
@@ -47,7 +40,6 @@ export const menuItemPropType = {
   active: PropTypes.bool,
   modifiers: arrayOf(PropTypes.string),
 };
-menuItemPropType.subLinks = PropTypes.arrayOf(PropTypes.shape(menuItemPropType));
 
 MenuItem.propTypes = PropTypes.shape(menuItemPropType);
 

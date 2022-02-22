@@ -1,6 +1,7 @@
 import React from 'react';
-import LogoImage from '../../../../assets/images/logo.png';
 import bem, { bemPrototype } from '../../../_utils/bem';
+
+const LogoImage = require('../../../../assets/images/logo.png');
 
 const Logo = ({ block, element = 'logo', modifiers = [] }) => (
   <img

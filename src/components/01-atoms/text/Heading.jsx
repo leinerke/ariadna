@@ -17,7 +17,7 @@ const Heading = (
 
 Heading.propTypes = {
   ...bemPrototype,
-  children: PropTypes.element,
+  children: PropTypes.node,
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
 };
 

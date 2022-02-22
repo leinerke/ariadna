@@ -13,14 +13,14 @@ const Hero = ({ block = 'hero', image, imageMobile, heading, content, buttons })
     <BackgroundImage block={block} image={image} imageMobile={imageMobile}>
       <div className={bem(block, 'content-inner')}>
         {heading && (
-          <Heading level="2" block={block} element="heading">
+          <Heading level={2} block={block} element="heading">
             {heading}
           </Heading>
         )}
         <Paragraph>{content}</Paragraph>
         <div className={bem(block, 'buttons')}>
-          {buttons.map(({ url, style, title }) => (
-            <Link url={url} block="button" modifiers={style ? [style] : []}>{title}</Link>
+          {buttons.map(({ url, style, title }, key) => (
+            <Link key={key} url={url} block="button" modifiers={style ? [style] : []}>{title}</Link>
           ))}
         </div>
       </div>
@@ -30,10 +30,10 @@ const Hero = ({ block = 'hero', image, imageMobile, heading, content, buttons })
 
 Hero.propTypes = {
   block: PropTypes.string,
-  image: imageTypeProps.isRequired,
+  image: imageTypeProps,
   heading: PropTypes.string,
-  content: PropTypes.element.isRequired,
-  buttons: PropTypes.array.isRequired,
+  content: PropTypes.node,
+  buttons: PropTypes.array,
 };
 
 export default Hero;

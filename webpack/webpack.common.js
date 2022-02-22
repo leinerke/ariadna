@@ -4,6 +4,7 @@ const globImporter = require('node-sass-glob-importer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const rootDir = path.resolve(__dirname, '../');
 
 const entry = () => {
@@ -72,7 +73,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg|gif)$/,
+        test: /\.(svg|gif|png|jpg|jpeg)$/,
         type: 'asset/resource',
         generator: {
           filename: 'assets/images/[name][ext][query]',
@@ -86,6 +87,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets/images', to: 'assets/images' },
+      ],
     }),
   ],
 };

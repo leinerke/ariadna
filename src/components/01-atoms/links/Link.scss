@@ -1,3 +1,3 @@
-.link {
-  @apply underline;
+a, .link {
+  @apply underline cursor-pointer;
 }

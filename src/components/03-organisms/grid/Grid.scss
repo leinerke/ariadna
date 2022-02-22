@@ -3,6 +3,40 @@
     @apply container mx-auto px-4 md:px-8;
   }
 
+  &__filters {
+    @apply mb-4;
+
+    .filter-list {
+      @apply flex gap-4 overflow-x-auto;
+      .filter-item {
+        a {
+          @apply no-underline py-3 px-4 relative inline-block min-w-max;
+
+          &:before {
+            content: '';
+            @apply block absolute w-full h-1 bg-black bottom-2 left-0 opacity-0;
+            @apply transition-opacity;
+          }
+
+          &:after {
+            content: '';
+            clip-path: polygon(0 0, 50% 100%, 96% 0);
+            @apply block absolute w-4 h-2 bg-black bottom-0 left-1/2 transform -translate-x-1/2 opacity-0;
+            @apply transition-opacity;
+          }
+        }
+
+        &--active {
+          a {
+            &:before, &:after {
+              @apply opacity-100;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__content {
     @apply grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
   }

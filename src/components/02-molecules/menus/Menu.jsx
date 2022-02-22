@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MenuItem, { menuItemPropType } from './MenuItem';
+import MenuItem  from './MenuItem';
 import bem from '../../_utils/bem';
 
 const Menu = ({ block = 'menu', element, modifiers = [], level, items }) => {
@@ -29,11 +29,7 @@ Menu.propTypes = {
   block: PropTypes.string,
   modifiers: PropTypes.arrayOf(PropTypes.string),
   level: PropTypes.number,
-  items: PropTypes.arrayOf({
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string,
-    below: PropTypes.arrayOf(PropTypes.shape(menuItemPropType)),
-  }),
+  items: PropTypes.array,
 };
 
 export default Menu;

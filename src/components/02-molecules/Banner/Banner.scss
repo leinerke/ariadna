@@ -1,6 +1,8 @@
 .banner {
+  @apply pb-8;
+
   .slick-dots {
-    @apply bottom-8;
+    @apply container px-4 md:px-8 left-1/2 transform -translate-x-1/2 bottom-8 md:text-right;
 
     li {
       button {

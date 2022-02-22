@@ -1,18 +1,35 @@
 .slide-over {
   $self: &;
-
   @apply fixed inset-0 overflow-hidden;
+  @apply transition-all ease-in-out duration-500;
+  @apply invisible;
+
+  &--open {
+    @apply visible;
+  }
 
   &__wrap {
     @apply absolute inset-0 overflow-hidden;
   }
 
   &__overlay {
-    @apply absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity;
+    @apply absolute inset-0 bg-gray-500 bg-opacity-75;
+    @apply transition-opacity ease-in-out duration-500;
+    @apply opacity-0;
+
+    @at-root #{$self}--open & {
+      @apply opacity-100;
+    }
   }
 
   &__container {
     @apply fixed inset-y-0 right-0 pl-10 max-w-full flex;
+    @apply transform transition ease-in-out duration-500 sm:duration-700;
+    @apply translate-x-full;
+
+    @at-root #{$self}--open & {
+      @apply translate-x-0;
+    }
   }
 
   &__content-wrap {
@@ -20,13 +37,18 @@
   }
 
   &__close-button {
-    @apply absolute top-0 left-0 -ml-8 pt-4 pr-2 flex;
-    @apply sm:-ml-10 sm:pr-4;
+    @apply absolute top-0 left-0 -ml-8 pt-4 pr-2 flex sm:-ml-10 sm:pr-4;
+    @apply transition-opacity ease-in-out duration-500;
+    @apply opacity-0;
+
+    @at-root #{$self}--open & {
+      @apply opacity-100;
+    }
 
     button {
-      @apply rounded-md text-gray-300 transition-colors;
-      @apply hover:text-white;
-      @apply focus:outline-none focus:ring-2 focus:ring-white;
+      @apply rounded-full bg-gray-100 text-gray-700 transition-colors;
+      @apply hover:bg-white hover:text-black;
+      @apply focus:outline-none;
 
       span {
         @apply sr-only;

@@ -1,0 +1,302 @@
+{
+  "openMenu": false,
+  "menu": [
+    {
+      "title": "Home",
+      "url": "#",
+      "active": true
+    },
+    {
+      "title": "Categories",
+      "url": "#"
+    },
+    {
+      "title": "My favorites",
+      "url": "#"
+    },
+    {
+      "title": "Sing in",
+      "url": "#",
+      "style": "alt"
+    }
+  ],
+  "banner": [
+    {
+      "image": {
+        "alt": "Aquaman",
+        "src": "assets/images/banner-aquaman.jpg"
+      },
+      "imageMobile": {
+        "alt": "Aquaman",
+        "src": "assets/images/banner-aquaman-mob.jpg"
+      },
+      "heading": "Aquaman",
+      "content": "Arthur Curry learns that he is the heir of the underwater kingdom ok Atlantis. This will become Aquaman, the emperor of Atlantis, committed to defending the entire planet, both on land and in the seas.",
+      "buttons": [
+        {
+          "title": "Watch Now",
+          "url": "#"
+        },
+        {
+          "title": "More Info",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "image": {
+        "alt": "Venom",
+        "src": "assets/images/banner-venom.png"
+      },
+      "imageMobile": {
+        "alt": "Venom",
+        "src": "assets/images/banner-venom-mob.png"
+      },
+      "heading": "Venom",
+      "content": "After finding a host body in investigative journalist Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.",
+      "buttons": [
+        {
+          "title": "Watch Now",
+          "url": "#"
+        },
+        {
+          "title": "More Info",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    },
+    {
+      "image": {
+        "alt": "Bumblebee",
+        "src": "assets/images/banner-bumblebee.jpg"
+      },
+      "imageMobile": {
+        "alt": "Bumblebee",
+        "src": "assets/images/banner-bumblebee-mob.jpg"
+      },
+      "heading": "Bumblebee",
+      "content": "In 1987, teenager Charlie finds what appears to be an ordinary yellow Volkswagen in a junkyard. However, as she restores it, the car transforms into Bumblebee, a small \"autobot\" who has been sent to Earth in order to establish a base for her kind.",
+      "buttons": [
+        {
+          "title": "Watch Now",
+          "url": "#"
+        },
+        {
+          "title": "More Info",
+          "url": "#",
+          "style": "secondary"
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "filters": [
+      {
+        "name": "All",
+        "active": true
+      },
+      {
+        "name": "New Release",
+        "type": "filter",
+        "by": "new",
+        "active": false
+      },
+      {
+        "name": "Most Popular",
+        "type": "sort",
+        "by": "popularity",
+        "active": false
+      },
+      {
+        "name": "Trends",
+        "type": "filter",
+        "by": "trends",
+        "active": false
+      },
+      {
+        "name": "My Favorites",
+        "type": "filter",
+        "by": "favorite",
+        "active": false
+      },
+      {
+        "name": "Recommendations",
+        "type": "filter",
+        "by": "recommended",
+        "active": false
+      }
+    ],
+    "items": [
+      {
+        "heading": "Bohemian rhapsody",
+        "recommended": true,
+        "new": true,
+        "popularity": 30,
+        "image": {
+          "src": "assets/images/bohemian-rhapsody.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Venom",
+        "trends": true,
+        "popularity": 10,
+        "new": false,
+        "image": {
+          "src": "assets/images/venom.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Avengers infinity war",
+        "new": false,
+        "favorite": true,
+        "popularity": 9,
+        "image": {
+          "src": "assets/images/avengers-infinity-war.png",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "First man",
+        "trends": true,
+        "new": false,
+        "popularity": 20,
+        "image": {
+          "src": "assets/images/first-man.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Han solo",
+        "trends": true,
+        "new": false,
+        "popularity": 2,
+        "image": {
+          "src": "assets/images/han-solo.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Increibles 2",
+        "trends": true,
+        "new": true,
+        "popularity": 2,
+        "image": {
+          "src": "assets/images/incredibles.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Jurassic world",
+        "trends": true,
+        "new": true,
+        "popularity": 2,
+        "image": {
+          "src": "assets/images/jurassic-world.jpg",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "heading": "Deadpool",
+        "trends": true,
+        "new": false,
+        "popularity": 2,
+        "image": {
+          "src": "assets/images/deadpool.png",
+          "alt": "Venom"
+        },
+        "buttons": [
+          {
+            "title": "Watch Now",
+            "url": "#"
+          },
+          {
+            "title": "More Info",
+            "url": "#",
+            "style": "secondary"
+          }
+        ]
+      }
+    ]
+  }
+}

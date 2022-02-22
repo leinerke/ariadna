@@ -30,10 +30,10 @@ const BackgroundImage = ({ image, imageMobile, children, block = 'background-ima
 };
 
 BackgroundImage.propTypes = {
-  outputImage: PropTypes.bool,
-  image: imageTypeProps.isRequired,
+  image: imageTypeProps,
   imageMobile: imageTypeProps,
-  block: PropTypes.string.isRequired,
+  block: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default BackgroundImage;

@@ -1,6 +1,6 @@
 .header {
   &__inner {
-    @apply container mx-auto px-4 md:px-8 flex justify-between items-center;
+    @apply container mx-auto py-2 lg:py-0 px-4 md:px-8 flex justify-between items-center;
   }
 
   &__branding {
