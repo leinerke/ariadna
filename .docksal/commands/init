@@ -32,6 +32,7 @@ else
 fi
 
 echo -e "${green_bg} Step 2 ${NC}${green} Build page...${NC}"
+fin exec npm i
 fin exec npm run build
 
 echo -en "${green_bg} DONE! ${NC} "
