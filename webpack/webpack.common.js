@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(rootDir, 'dist'),
     filename: '[name].min.js',
-    publicPath: '/',
+    publicPath: './',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
